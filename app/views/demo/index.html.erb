@@ -1,2 +1,6 @@
-<h1>Hello World!<h1>
-<p>Find me in app/views/demo/index.html.erb</p>
+<h1>Hello World from Index!</h1>
+
+<a href = "/demo/Hello">Hello Page 1</a><br />
+<%= link_to('Hello Page 2', {:action => 'Hello'}) %><br />
+
+<%= link_to('Hello with Parameters', {:action => 'Hello', :page => 5, :id => 20}) %><br />
