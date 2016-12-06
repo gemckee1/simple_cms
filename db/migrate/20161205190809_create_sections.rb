@@ -7,6 +7,7 @@ class CreateSections < ActiveRecord::Migration[5.0]
       t.column("position", :integer)
       t.column("visible", :boolean, :default => false)
       t.column("content_type", :string)
+      t.text("content")
       t.timestamps
     end
     add_index("sections", "page_id")

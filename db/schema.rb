@@ -39,10 +39,11 @@ ActiveRecord::Schema.define(version: 20161205190809) do
     t.integer  "page_id"
     t.string   "name"
     t.integer  "position"
-    t.boolean  "visible",      default: false
+    t.boolean  "visible",                    default: false
     t.string   "content_type"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.text     "content",      limit: 65535
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
     t.index ["page_id"], name: "index_sections_on_page_id", using: :btree
   end
 
